@@ -1,0 +1,7 @@
+{
+  "name": "dydMusic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
