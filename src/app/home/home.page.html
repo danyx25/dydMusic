@@ -21,11 +21,23 @@
     <form [formGroup]="formularioLogin">
 
     <ion-card-content>
+
       <ion-item>
         <ion-input formControlName="nombre" label="Usuario" label-placement="floating" ></ion-input>
-
       </ion-item>
-      <ion-input formControlName="password" label="Password" label-placement="floating" type="password"></ion-input>
+
+      <ion-item>
+        <ion-input formControlName="password" label="Password" label-placement="floating" type="password" [type]="passwordTypeInput"></ion-input>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="togglePasswordMode()">
+            <ion-icon [name]="(passwordTypeInput === 'text')?'eye-off':'eye'"></ion-icon>
+          </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="password" label="Password" label-placement="floating" type="password" [type]="passwordType"></ion-input>
+        <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+      </ion-item>
+
     </ion-card-content>
     </form>
 
