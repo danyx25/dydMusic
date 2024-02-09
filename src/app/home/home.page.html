@@ -1,21 +1,19 @@
-<ion-content [fullscreen]="true">
+<ion-content>
   <div class="divContent">
+    <form [formGroup]="formularioLogin">
       <h1>
         Login
       </h1>
-
-    <form [formGroup]="formularioLogin">
       <ion-item>
-        <ion-input formControlName="nombre" label="Usuario" label-placement="floating"></ion-input>
+        <ion-input formControlName="nombre" placeholder="Usuario"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
       </ion-item>
       <ion-item>
-        <ion-input formControlName="password" label="Password" label-placement="floating" type="password"
-                   [type]="passwordTypeInput"></ion-input>
+        <ion-input formControlName="password" placeholder="Password" [type]="passwordTypeInput"></ion-input>
         <ion-icon (click)="togglePasswordMode()" [name]="(passwordTypeInput === 'text')?'eye':'eye-off'"></ion-icon>
       </ion-item>
+      <ion-button (click)="ingresar()">Ingresar</ion-button>
     </form>
-
-    <ion-button (click)="ingresar()">Ingresar</ion-button>
   </div>
 </ion-content>
 
