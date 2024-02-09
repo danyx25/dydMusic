@@ -1,14 +1,52 @@
-
-
-ion-button{
+.divContent{
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  background: black;
 }
 
-ion-card{
-  width: 325px;
-  margin: 10%;
-  padding: 10%;
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  filter: drop-shadow( 0 5px 6px #6A27CC);
+  border: 4px solid white;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #6A27CC;
+  margin-bottom: 200px;
+  animation-name: prueba;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  background: linear-gradient(to left,black, #6A27CC);
 }
 
+@keyframes prueba {
+  0%{
+    width: 0;
+    //transform: translateX(-100%);
+  }
+  100%{
+    width: 100%;
+    //transform: translateX(0);
+  }
+}
+ion-item{
+  --background: transparent;
+}
+
+ion-input{
+  color: white;
+}
+
+ion-icon{
+  color: white;
+}

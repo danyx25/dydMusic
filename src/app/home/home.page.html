@@ -1,58 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Login
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-
-
-  <ion-card>
-    <ion-avatar>
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-    </ion-avatar>
-    <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
-    </ion-card-header>
-
+  <div class="divContent">
+      <h1>
+        Login
+      </h1>
 
     <form [formGroup]="formularioLogin">
-
-    <ion-card-content>
-
       <ion-item>
-        <ion-input formControlName="nombre" label="Usuario" label-placement="floating" ></ion-input>
+        <ion-input formControlName="nombre" label="Usuario" label-placement="floating"></ion-input>
       </ion-item>
-
       <ion-item>
-        <ion-input formControlName="password" label="Password" label-placement="floating" type="password" [type]="passwordTypeInput"></ion-input>
-          <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="togglePasswordMode()">
-            <ion-icon [name]="(passwordTypeInput === 'text')?'eye-off':'eye'"></ion-icon>
-          </ion-button>
+        <ion-input formControlName="password" label="Password" label-placement="floating" type="password"
+                   [type]="passwordTypeInput"></ion-input>
+        <ion-icon (click)="togglePasswordMode()" [name]="(passwordTypeInput === 'text')?'eye':'eye-off'"></ion-icon>
       </ion-item>
-
-      <ion-item>
-        <ion-input formControlName="password" label="Password" label-placement="floating" type="password" [type]="passwordType"></ion-input>
-        <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
-      </ion-item>
-
-    </ion-card-content>
     </form>
 
-    <br>
     <ion-button (click)="ingresar()">Ingresar</ion-button>
-    <br>
-
-  </ion-card>
-
-
+  </div>
 </ion-content>
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button>Registrarse</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-footer>
+
