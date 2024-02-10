@@ -1,9 +1,30 @@
 <ion-content>
   <div class="divContent">
+
+
+
     <form [formGroup]="formularioLogin">
-      <h1>
+      <div class="cat">
+        <div class="ear ear--left"></div>
+        <div class="ear ear--right"></div>
+        <div class="face">
+          <div class="eye eye--left">
+            <div class="eye-pupil"></div>
+          </div>
+          <div class="eye eye--right">
+            <div class="eye-pupil"></div>
+          </div>
+          <div class="muzzle"></div>
+        </div>
+      </div>
+
+      <div class="area">
         Login
-      </h1>
+      </div>
+
+<!--      <h1>-->
+<!--        Login-->
+<!--      </h1>-->
       <ion-item>
         <ion-input formControlName="nombre" placeholder="Usuario"></ion-input>
         <ion-icon name="person-outline"></ion-icon>
@@ -12,7 +33,8 @@
         <ion-input formControlName="password" placeholder="Password" [type]="passwordTypeInput"></ion-input>
         <ion-icon (click)="togglePasswordMode()" [name]="(passwordTypeInput === 'text')?'eye':'eye-off'"></ion-icon>
       </ion-item>
-      <ion-button (click)="ingresar()">Ingresar</ion-button>
+      <ion-button (click)="ingresar()" class="btn">Ingresar</ion-button>
+
     </form>
   </div>
 </ion-content>
