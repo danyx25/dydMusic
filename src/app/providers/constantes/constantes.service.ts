@@ -6,6 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class ConstantesService {
 
+  name: string='';
+  password:string='';
+  message:string='Por favor, completa usuario y contraseña'
+
+
+
   constructor() {
   }
 }

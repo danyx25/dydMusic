@@ -21,6 +21,30 @@ ion-content {
   width: 100%;
   height: 100%;
 }
+
+// luz que da fulgor ---------------------------------------------------------------
+.brillo{
+  border-radius:50%;
+  background-color: transparent;
+  box-shadow: 0 0 20px 10px #FFFFFFFF;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 3px 5px red) drop-shadow(0 3px 5px blue);
+  }
+  50% {
+    box-shadow: 0 0 50px 20px #e176f5;
+  }
+  100% {
+    filter: drop-shadow(0 3px 5px red) drop-shadow(0 3px 5px blue);
+  }
+}
+
+// fin de luz ---------------------------------------------------------------
+
+
 .figuraFondo{
   position: absolute;
   top: 0;
