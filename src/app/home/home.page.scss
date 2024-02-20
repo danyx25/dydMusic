@@ -1,5 +1,5 @@
 ion-content {
-  --background: black;
+  --background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,21 @@ ion-content {
   --padding-start: 0;
   --padding-top: 0;
 }
+.figura{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, white, blue 60%);
+}
 
+.figura2{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: black;
+  border-left: 2px solid rgb(255,255,255,1);
+  border-right: 2px solid rgb(255,255,255,1);
+}
 .divContent {
   display: flex;
   justify-content: center;
@@ -22,79 +36,6 @@ ion-content {
   height: 100%;
 }
 
-// luz que da fulgor ---------------------------------------------------------------
-.brillo{
-  border-radius:50%;
-  background-color: transparent;
-  box-shadow: 0 0 20px 10px #FFFFFFFF;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  0% {
-    filter: drop-shadow(0 3px 5px red) drop-shadow(0 3px 5px blue);
-  }
-  50% {
-    box-shadow: 0 0 50px 20px #e176f5;
-  }
-  100% {
-    filter: drop-shadow(0 3px 5px red) drop-shadow(0 3px 5px blue);
-  }
-}
-
-// fin de luz ---------------------------------------------------------------
-
-
-.figuraFondo{
-  position: absolute;
-  top: 0;
-  right: 5%;
-  width: 0;
-  height: 40px;
-  border: 2px solid rgb(255,255,255,1);
-  border-radius: 5px;
-  filter: drop-shadow(0 3px 5px red) drop-shadow(0 3px 5px blue);
-  background: transparent;
-  animation: figuraEfecto 5s infinite;
-}
-@keyframes figuraEfecto {
-  0%{
-    top: 0;
-  }
-  100%{
-    top: 100%;
-  }
-}
-.figuraFondo2{
-  position: absolute;
-  top: 0;
-  right: 5%;
-  width: 0;
-  height: 100%;
-  border: 2px solid rgb(255,255,255,0.5);
-}
-
-.figuraFondo3{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgb(255,255,255,1);
-  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
-  background: transparent;
-  animation: figuraEfecto3 5s infinite;
-}
-@keyframes figuraEfecto3 {
-  0%{
-    rotate: 0;
-  }
-  100%{
-    top: 100%;
-    right: 100%;
-    rotate: 360deg;
-  }
-}
 
 form {
   padding: 5%;
@@ -112,54 +53,54 @@ ion-img{
   padding: 0;
   width: 45vw;
   height: 45vw;
-  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
-  animation-name: efect2;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
+  filter: drop-shadow(0 4px 5px blue);
+  animation: zoom 0.5s alternate infinite both;
 }
-
+@keyframes zoom {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}
 form ion-item {
-  --background: transparent;
+  --background: rgb(255,255,255,1);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  border: 2px solid black;
+  backdrop-filter: blur(5px);
   border-radius: 15px;
-  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
-  opacity: 0;
-  animation-name: efect2;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
+  --inner-padding-bottom: 0;
+  --inner-padding-end: 0;
+  --inner-padding-start: 0;
+  --inner-padding-top: 0;
+  --padding-bottom: 0;
+  --padding-end: 0;
+  --padding-start: 0;
+  --padding-top: 0;
 }
 
-@keyframes efect2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 ion-input {
-  color: white;
+  color: black;
   margin: 10px;
   font-size: 5vw;
+  filter: drop-shadow(0 4px 5px blue);
 }
 
 ion-icon {
-  color: white;
+  color: black;
   font-size: 7vw;
+  padding: 10px;
+  filter: drop-shadow(0 4px 5px blue);
 }
 
 .divBtn{
-  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
+  filter: drop-shadow(0 2px 5px blue);
   border: 2px solid white;
   border-radius: 15px;
   padding: 15px;
-  opacity: 0;
-  animation-name: efect2;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
 }
 
 .btn {
