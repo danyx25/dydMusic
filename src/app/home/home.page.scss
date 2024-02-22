@@ -1,5 +1,5 @@
 ion-content {
-  --background: transparent;
+  --background: radial-gradient(circle at center, darkred, blue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,20 +12,86 @@ ion-content {
   --padding-start: 0;
   --padding-top: 0;
 }
-.figura{
+.figuraFondo{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, white, blue 60%);
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(255,255,255,1);
+  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
+  background: transparent;
+  animation: figuraEfecto 5s alternate infinite both;
 }
-
-.figura2{
+@keyframes figuraEfecto {
+  0%{
+    top: -100px;
+    left: -100px;
+  }
+  100%{
+    rotate: 360deg;
+    top: 105%;
+    left: 105%;
+  }
+}
+.figuraFondo2{
   position: absolute;
-  width: 50%;
-  height: 100%;
-  background: black;
-  border-left: 2px solid rgb(255,255,255,1);
-  border-right: 2px solid rgb(255,255,255,1);
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(255,255,255,1);
+  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
+  background: transparent;
+  animation: figuraEfecto2 5s alternate 1s infinite both;
+}
+@keyframes figuraEfecto2 {
+  0%{
+    top: 105%;
+    left: 105%;
+  }
+  100%{
+    rotate: 360deg;
+    top: -100px;
+    left: -100px;
+  }
+}
+.figuraFondo3{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(255,255,255,1);
+  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
+  background: transparent;
+  animation: figuraEfecto3 5s alternate 2s infinite both;
+}
+@keyframes figuraEfecto3 {
+  0%{
+    top: 105%;
+    left: -100px;
+  }
+  100%{
+    rotate: 360deg;
+    top: -100px;
+    left: 105%;
+  }
+}
+.figuraFondo4{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(255,255,255,1);
+  filter: drop-shadow(0 2px 5px red) drop-shadow(0 2px 5px blue);
+  background: transparent;
+  animation: figuraEfecto4 5s alternate 3s infinite both;
+}
+@keyframes figuraEfecto4 {
+  0%{
+
+    top: -100px;
+    left: 105%;
+  }
+  100%{
+    rotate: 360deg;
+    top: 105%;
+    left: -100px;
+  }
 }
 .divContent {
   display: flex;
@@ -54,7 +120,6 @@ ion-img{
   width: 45vw;
   height: 45vw;
   filter: drop-shadow(0 4px 5px blue);
-  animation: zoom 0.5s alternate infinite both;
 }
 @keyframes zoom {
   0%{
@@ -65,12 +130,11 @@ ion-img{
   }
 }
 form ion-item {
-  --background: rgb(255,255,255,1);
+  --background: rgb(255,255,255,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-  backdrop-filter: blur(5px);
   border-radius: 15px;
   --inner-padding-bottom: 0;
   --inner-padding-end: 0;
@@ -86,14 +150,12 @@ ion-input {
   color: black;
   margin: 10px;
   font-size: 5vw;
-  filter: drop-shadow(0 4px 5px blue);
 }
 
 ion-icon {
   color: black;
   font-size: 7vw;
   padding: 10px;
-  filter: drop-shadow(0 4px 5px blue);
 }
 
 .divBtn{
@@ -101,6 +163,7 @@ ion-icon {
   border: 2px solid white;
   border-radius: 15px;
   padding: 15px;
+  animation: zoom 1s alternate infinite both;
 }
 
 .btn {
